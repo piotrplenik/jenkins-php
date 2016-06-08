@@ -1,6 +1,8 @@
 Jenkins for PHP Continuous Integration
 ======================================
 
+* Caution! This is experimental (not working yet) branch. Do not use! * 
+
 # Installation requirements
 
 ROOT permission is required.
