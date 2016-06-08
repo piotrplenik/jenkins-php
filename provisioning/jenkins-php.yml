@@ -1,0 +1,12 @@
+---
+
+- hosts: defaulthost
+  become: true
+  vars_files:
+    - "../conf/parameters.yml"
+
+  roles:
+    - common
+    - role: ansible-role-dns
+      dns_forced_in_dhclientconf: false
+    - geerlingguy.jenkins

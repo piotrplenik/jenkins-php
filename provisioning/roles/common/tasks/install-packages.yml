@@ -1,0 +1,22 @@
+---
+
+- name: Install required packages
+  apt: pkg={{ item }} update_cache=yes state=latest
+  with_items:
+     - python
+     - curl
+     - gnupg
+     - traceroute
+     - htop
+     - python-pip
+     - duplicity
+     - build-essential
+     - ntp
+     - mc
+     - ssh
+     - acl
+     - git
+     - sudo
+     - python-httplib2
+     - nano
+     - pwgen
