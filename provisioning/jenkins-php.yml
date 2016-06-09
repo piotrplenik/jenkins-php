@@ -10,3 +10,4 @@
     - role: ansible-role-dns
       dns_forced_in_dhclientconf: false
     - geerlingguy.jenkins
+    - jenkins-configure
