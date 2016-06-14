@@ -12,13 +12,14 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     # To make running ansible playbooks against vagrant hosts a smoother experience, we
     # run apt-get udpate and copy our public key to the host.
     config.vm.provision "shell", inline: <<-SHELL
-      sudo apt-get update
+      apt-get update
+      apt-get install -y python sudo
     SHELL
 
     # ==> Initialize Mnumi ...
     config.vm.define "mnumi" do |machine|
-      machine.vm.hostname = "mnumi"
-      machine.vm.box = "ubuntu/trusty64"
+      machine.vm.hostname = "jenkins-php"
+      machine.vm.box = "ubuntu/xenial64"
       machine.vm.network "private_network", ip: "192.168.33.21"
       machine.vm.hostname = "jenkins-php.vagrant"
       machine.vm.provision :ansible do |ansible|
@@ -28,5 +29,10 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
         ansible.inventory_path = "./provisioning/group_vars/vagrant.ini"
         ansible.verbose = "v"
       end
+    end
+
+    config.vm.provider "virtualbox" do |v|
+      v.customize ["modifyvm", :id, "--cpuexecutioncap", "60"]
+      v.memory = 2048
     end
 end

@@ -45,3 +45,7 @@ $ vagrant up
 $ cd provisioning/
 $ ansible-playbook -i group_vars/vagrant.ini jenkins-php.yml
 ```
+
+# Credits
+
+Thanks to http://jenkins-php.org/

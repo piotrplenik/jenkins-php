@@ -9,5 +9,16 @@
     - common
     - role: ansible-role-dns
       dns_forced_in_dhclientconf: false
-    - geerlingguy.jenkins
-    - jenkins-configure
+    - flyapen.jenkins
+    - role: jenkins-configure
+      vars:
+        jenkins:
+          deb:
+            dependencies:
+              - 'openjdk-8-jre'
+              - 'openjdk-8-jdk'
+              - 'git'
+              - 'curl'
+    - { role: geerlingguy.php }
+    - { role: geerlingguy.composer }
+    - php-tools

@@ -1,0 +1,22 @@
+---
+
+plugins:
+  - 'ldap'
+  - 'github'
+  - 'translation'
+  - 'preSCMbuildstep'
+port: 8080
+prefix: '/'
+email:
+  smtp_host: 'mail.example.com'
+  smtp_ssl: 'true'
+  default_email_suffix: '@example.com'
+
+jenkins:
+  deb:
+    repo: 'deb http://pkg.jenkins-ci.org/debian binary/' # Jenkins repository
+    dependencies: # Jenkins dependencies
+      - 'openjdk-8-jre'
+      - 'openjdk-8-jdk'
+      - 'git'
+      - 'curl'
