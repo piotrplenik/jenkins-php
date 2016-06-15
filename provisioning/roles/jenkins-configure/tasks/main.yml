@@ -1,5 +1,0 @@
-
-- shell: cat "/var/lib/jenkins/secrets/initialAdminPassword"
-  register: initial_admin_password
-
-- debug: msg="To unlock Jenkins, please use the password {{ initial_admin_password.stdout }}"
