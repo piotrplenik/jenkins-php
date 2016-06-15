@@ -12,4 +12,4 @@
     - { role: geerlingguy.nginx }
     - { role: geerlingguy.php }
     - { role: geerlingguy.composer }
-    - { role: php-tools }
+#    - { role: php-tools }

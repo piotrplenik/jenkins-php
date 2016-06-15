@@ -2,9 +2,19 @@
 
 php_webserver_daemon: "nginx"
 
-
 # force Jenkins stable (1.x version)
 jenkins_repo_url: deb http://pkg.jenkins-ci.org/debian-stable binary/
 jenkins_repo_key_url: http://pkg.jenkins-ci.org/debian-stable/jenkins-ci.org.key
 
-jenkins_plugins: ['checkstyle']
+jenkins_plugins:
+  - 'checkstyle'
+  - 'cloverphp'
+  - 'crap4j'
+  - 'dry'
+  - 'htmlpublisher'
+  - 'jdepend'
+  - 'plot'
+  - 'pmd'
+  - 'violations'
+  - 'xunit'
+  - 'warnings'
