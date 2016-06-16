@@ -5,7 +5,7 @@ Jenkins for PHP Continuous Integration
 
 # Installation requirements
 
-ROOT permission is required.
+Vagrant 1.8.4+ is required.
 
 Install vagrant:
 
