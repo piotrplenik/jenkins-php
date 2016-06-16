@@ -1,7 +1,6 @@
 # Installation:
 # $ ansible-galaxy install -r ansible-requirements.yml
 #
-- src: https://github.com/jdauphant/ansible-role-dns
 - src: https://github.com/FloeDesignTechnologies/ansible-haproxy
 - geerlingguy.jenkins
 - geerlingguy.nginx
