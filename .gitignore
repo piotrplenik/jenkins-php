@@ -1,6 +1,6 @@
 vendors/
-*.iml
 .idea
 .vagrant/
 *.retry
 vars/.vault_pass.txt
+*.log
