@@ -7,9 +7,6 @@ env:
       IP: 192.168.33.21
       VM_DIR: /etc/ansible/roles/role_under_test
 
-before_install:
-  - sudo apt-get update -qq
-
   matrix:
     - distribution: ubuntu
       version: 16.04
@@ -35,7 +32,7 @@ script:
   - 'sudo docker run --detach --volume="${PWD}":${VM_DIR}:ro ${run_opts} ${distribution}-${version}:ansible "${init}" > "${container_id}"'
 
   # Set hostname.
-   - 'sudo docker exec "$(cat ${container_id})" hostname ${HOSTNAME}'
+  - 'sudo docker exec "$(cat ${container_id})" hostname ${HOSTNAME}'
 
   # Install dependencies.
   - 'sudo docker exec "$(cat ${container_id})" ansible-galaxy install -r ${VM_DIR}/ansible-requirements.yml'
