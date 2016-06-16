@@ -12,7 +12,7 @@ env:
       version: 16.04
       init: /sbin/init
       run_opts: "--privileged"
-      playbook: test.yml
+      playbook: jenkins-php.yml
 
 services:
   - docker
@@ -41,14 +41,14 @@ script:
   - 'rubocop --except LineLength,Eval,MutableConstant'
 
   # Ansible syntax check.
-  - 'sudo docker exec --tty "$(cat ${container_id})" env TERM=xterm ansible-playbook ${VM_DIR}/provisioning/jenkins-php.yml --syntax-check'
+  - 'sudo docker exec --tty "$(cat ${container_id})" env TERM=xterm ansible-playbook ${VM_DIR}/provisioning/${playbook} --syntax-check'
 
   # Test role.
-  - 'sudo docker exec --tty "$(cat ${container_id})" env TERM=xterm ansible-playbook ${VM_DIR}/provisioning/jenkins-php.yml'
+  - 'sudo docker exec --tty "$(cat ${container_id})" env TERM=xterm ansible-playbook ${VM_DIR}/provisioning/${playbook}'
 
   # Test role idempotence.
   - >
-    sudo docker exec "$(cat ${container_id})" ansible-playbook ${VM_DIR}/provisioning/jenkins-php.yml
+    sudo docker exec "$(cat ${container_id})" ansible-playbook ${VM_DIR}/provisioning/${playbook}
     | grep -q 'changed=0.*failed=0'
     && (echo 'Idempotence test: pass' && exit 0)
     || (echo 'Idempotence test: fail' && exit 1)
