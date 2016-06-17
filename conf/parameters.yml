@@ -19,3 +19,4 @@ jenkins_plugins:
   - 'xunit'
   - 'warnings'
   - 'github'
+  - 'ssh-agent'

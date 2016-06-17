@@ -20,3 +20,4 @@
      - python-httplib2
      - nano
      - pwgen
+     - ant
