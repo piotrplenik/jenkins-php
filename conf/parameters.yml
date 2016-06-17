@@ -18,3 +18,4 @@ jenkins_plugins:
   - 'violations'
   - 'xunit'
   - 'warnings'
+  - 'github'
