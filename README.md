@@ -1,6 +1,8 @@
 Jenkins for PHP Continuous Integration
 ======================================
 
+[![Build Status](https://travis-ci.org/jupeter/jenkins-php.svg?branch=master)](https://travis-ci.org/jupeter/jenkins-php)
+
 * Caution! This is experimental (not working yet) branch. Do not use! * 
 
 # Installation requirements
