@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<hudson.plugins.phing.PhingInstallation_-DescriptorImpl>
+    <installations class="hudson.plugins.phing.PhingInstallation-array">
+        <hudson.plugins.phing.PhingInstallation>
+            <name>Phing from composer package ("./bin")</name>
+            <home>$WORKSPACE/bin</home>
+            <properties/>
+        </hudson.plugins.phing.PhingInstallation>
+    </installations>
+</hudson.plugins.phing.PhingInstallation_-DescriptorImpl>

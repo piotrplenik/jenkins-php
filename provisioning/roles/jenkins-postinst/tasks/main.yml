@@ -1,0 +1,17 @@
+---
+
+- template:
+    src: "{{template|default('hudson.plugins.phing.PhingInstallation.xml')}}"
+    dest: "/var/lib/jenkins/hudson.plugins.phing.PhingInstallation.xml"
+    owner: "jenkins"
+    group: "jenkins"
+    mode: "0644"
+  notify: restart jenkins
+
+- template:
+    src: "{{template|default('jenkins.model.JenkinsLocationConfiguration.xml')}}"
+    dest: "/var/lib/jenkins/jenkins.model.JenkinsLocationConfiguration.xml"
+    owner: "jenkins"
+    group: "jenkins"
+    mode: "0644"
+  notify: restart jenkins
