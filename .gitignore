@@ -1,6 +1,6 @@
-vendors/
 .idea
 .vagrant/
 *.retry
 vars/.vault_pass.txt
 *.log
+conf/parameters.yml

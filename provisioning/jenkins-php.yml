@@ -3,12 +3,12 @@
 - hosts: all
   become: true
   vars_files:
+    - "../conf/global.yml"
     - "../conf/parameters.yml"
 
   roles:
-    - common
+    - { role: common }
     - { role: geerlingguy.jenkins }
     - { role: geerlingguy.nginx }
     - { role: geerlingguy.php }
     - { role: geerlingguy.composer }
-#    - { role: php-tools }

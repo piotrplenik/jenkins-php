@@ -3,8 +3,6 @@ Jenkins for PHP Continuous Integration
 
 [![Build Status](https://travis-ci.org/jupeter/jenkins-php.svg?branch=master)](https://travis-ci.org/jupeter/jenkins-php)
 
-* Caution! This is experimental (not working yet) branch. Do not use! * 
-
 # Installation requirements
 
 Vagrant 1.8.4+ is required.
@@ -25,23 +23,19 @@ Install ansible:
 
 - - -
 
-# Use in Vagrant
+# Jenkins for PHP installation
+
+## In Vagrant
 
 Before use, please setup your environment:
 
 ```
 #!bash
 source /opt/ansible/hacking/env-setup
-```
-
-## Jenkins for PHP installation
-
-```
-#!bash
 $ vagrant up
 ```
 
-# Use it in *production*
+# In *production*
 ```
 #!bash
 $ cd provisioning/
