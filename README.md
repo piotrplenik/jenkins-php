@@ -45,3 +45,6 @@ $ ansible-playbook -i group_vars/vagrant.ini jenkins-php.yml
 # Credits
 
 Thanks to http://jenkins-php.org/
+
+# Links
+ - http://blog.lazycloud.net/using-jenkins-for-a-symfony2-project/
